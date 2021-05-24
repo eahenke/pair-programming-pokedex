@@ -1,0 +1,27 @@
+.pokemon {
+    display: grid;
+    padding: 1rem;
+}
+
+.pokemon-name {
+    text-align: center;
+}
+
+.pokemon img {
+    margin: 0 auto;
+}
+
+.pokemon-info {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: max-content max-content;
+}
+
+.pokemon-info dt {
+    font-weight: bold;
+    text-align: left;
+}
+
+.pokemon-info dd {
+    text-align: right;
+}

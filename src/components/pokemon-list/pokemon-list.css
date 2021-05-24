@@ -5,13 +5,16 @@
 
 .poke-list {
     display: grid;
+    grid-template-columns: 1fr;
 
-    @media (min-width: 768px) {
-        grid-template-columns: 1fr;
-    }
-
-    grid-template-columns: 1fr 1fr 1fr;
+    
     margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .poke-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 .error {

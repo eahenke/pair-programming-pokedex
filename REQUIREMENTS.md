@@ -3,18 +3,11 @@
 Create a page that displays information about Pokemon using the public PokeApi.
 
 ## Basic Requirements
-* Connect to API to fetch Pokemon information
-* Display each Pokemon in a mobile-friendly grid format
-* Each Pokemon should display an **image**, **name**, **type(s)** and the following stats: **HP**, **Attack**, **Defense**, **Special Attack**, **Special Defense**
-* The page should be initialized with the first 20 Pokemon returned by the API
-* The page should have a button that loads the next 20 Pokemon when clicked
+Layout and state management are already handled. You should create an `api` module that connects to the local server and returns data, with the following requirements:
+
+* Method `getPokemonList` should fetch data from server
+* Should support passing pagination query
+* Error handling
 
 ## Additional Features
 * Unit testing
-* Allow users to filter by name
-* Allow users to filter by type
-* Infinite scroll
-
-## Resources
-* Public API: [https://pokeapi.co/api/v2](https://pokeapi.co/api/v2)
-* Documentation: [https://pokeapi.co/docs/v2](https://pokeapi.co/docs/v2)

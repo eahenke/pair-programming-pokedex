@@ -3,17 +3,17 @@
 Create a page that displays information about Pokemon using the public PokeApi.
 
 ## Basic Requirements
-* Connect to API to fetch Pokemon information
-* Display each Pokemon in a mobile-friendly grid format
-* Each Pokemon should display an **image**, **name**, **type(s)** and the following stats: **HP**, **Attack**, **Defense**, **Special Attack**, **Special Defense**
-* The page should be initialized with the first 20 Pokemon returned by the API
-* The page should have a button that loads the next 20 Pokemon when clicked
+Network requests and layout are already handled. You should implement the following:
+
+* Create a React Hook that uses the API helper to fetch Pokemon information
+* Hook should return an object with the following fields:
+    * `data`, the `pokemon` field returned from `api.getPokemonList()`.
+    * `loading`, a boolean.
+    * `error`, a string with the error message, if any.
 
 ## Additional Features
-* Unit testing
-* Allow users to filter by name
-* Allow users to filter by type
-* Infinite scroll
+* Pagination: The page should have a button that loads the next set Pokemon when clicked
+
 
 ## Resources
 * Public API: [https://pokeapi.co/api/v2](https://pokeapi.co/api/v2)

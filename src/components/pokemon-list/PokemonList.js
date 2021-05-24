@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { arrayOf, bool, func, string } from 'prop-types';
 import { usePokemon } from '../../hooks';
+import PokemonPropType from '../../prop-types/pokemon';
 import Pokemon from '../pokemon/Pokemon';
 import './pokemon-list.css';
 
@@ -21,10 +23,10 @@ export default function PokemonList() {
 
 export function PokemonListPresentation({ pokemon, loading, error, onClickNext }) {
     return (
-        <>
-            {error ? <p>Error: {error}</p> : null}
+        <div className="poke-list-container">
+            {error ? <p className="error">Error: {error}</p> : null}
             {loading ? <p>LOADING</p> : null}
-            { pokemon ? (
+            { pokemon && pokemon.length ? (
                 <div className="poke-list">
                     {(pokemon.map(poke => 
                     <Pokemon key={poke.name} pokemon={poke} />
@@ -32,6 +34,13 @@ export function PokemonListPresentation({ pokemon, loading, error, onClickNext }
                 </div>
             ) : null}
             <button onClick={onClickNext}>Next</button>
-      </>
+      </div>
     );
+}
+
+PokemonListPresentation.propTypes = {
+    pokemon: arrayOf(PokemonPropType),
+    loading: bool,
+    error: string,
+    onClickNext: func.isRequired
 }

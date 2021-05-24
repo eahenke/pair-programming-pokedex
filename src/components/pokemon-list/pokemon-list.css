@@ -1,4 +1,14 @@
+.poke-list-container {
+    text-align: center;
+    margin-bottom: 8rem;
+}
+
 .poke-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 3rem;
+}
+
+.error {
+    color: red;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, number, shape } from 'prop-types';
+import PokemonPropType from '../../prop-types/pokemon';
 import './pokemon.css';
 
 const capitalize = (str = '') => {
@@ -36,17 +36,5 @@ export default function Pokemon({pokemon}) {
 }
 
 Pokemon.propTypes = {
-    pokemon: shape({
-        name: string,
-        id: number,
-        sprite: string,
-        stats: shape({
-            hp: number,
-            attack: number,
-            defense: number,
-            specialAttack: number,
-            specialDefense: number,
-            speed: number,
-        })
-    })
-}
+    pokemon: PokemonPropType
+};
